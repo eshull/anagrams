@@ -4,8 +4,6 @@ class Anagram
     @secondword = word2
   end
 
-
-
   def compare
 
     word_array_one = @firstword.downcase.split("")

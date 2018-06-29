@@ -12,4 +12,8 @@ describe('#anagram') do
     word = Anagram.new("TeAm", "mEat")
     expect(word.compare).to(eq("anagram"))
   end
+  it("checks if two words are actually words by searching them for vowels") do
+    word = Anagram.new("Tmtx", "xtmt")
+    expect(word.compare).to(eq("not a word, try again"))
+  end
 end
