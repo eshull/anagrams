@@ -6,7 +6,7 @@
 
 ## Description
 
-Anagrams and Antigrams
+Anagrams and Antigrams: Comparing two words and those that have some of the same letters are anagrams. Those that do not are antigrams.
 
 ## Setup/Contribution Requirements
 
@@ -21,9 +21,12 @@ Anagrams and Antigrams
 * rspec
 
 ## Specs/Steps
-* accept a word as input
- -
- -
+* Check if two words are anagrams
+* Check if two words are anagrams regardless of capitalization
+* Make sure the word inputted is actually a word by checking for vowels
+* Check if two words have no matching letters and are therefore Antigrams
+* Check if multiple words are anagrams by removing spaces and punctuation
+
 ## License
 
 This software is licensed under the MIT license.
