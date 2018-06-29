@@ -7,12 +7,16 @@ class Anagram
 
 
   def compare
+
     word_array_one = @firstword.split("")
     word_array_two = @secondword.split("")
     sorted_one = word_array_one.sort do |a,b| a <=> b end
     sorted_two = word_array_two.sort do |a,b| a <=> b end
     print sorted_one
     print sorted_two
-    false
+    if sorted_one.join("") == sorted_two.join("")
+      return "anagram"
+    end
+
   end
 end
