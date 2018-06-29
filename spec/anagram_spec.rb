@@ -8,4 +8,8 @@ describe('#anagram') do
     word = Anagram.new("team", "meat")
     expect(word.compare).to(eq("anagram"))
   end
+  it("checks if two words are anagrams regardless of capitalization") do
+    word = Anagram.new("TeAm", "mEat")
+    expect(word.compare).to(eq("anagram"))
+  end
 end

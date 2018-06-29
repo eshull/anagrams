@@ -8,15 +8,16 @@ class Anagram
 
   def compare
 
-    word_array_one = @firstword.split("")
-    word_array_two = @secondword.split("")
+    word_array_one = @firstword.downcase.split("")
+    word_array_two = @secondword.downcase.split("")
     sorted_one = word_array_one.sort do |a,b| a <=> b end
     sorted_two = word_array_two.sort do |a,b| a <=> b end
     print sorted_one
     print sorted_two
     if sorted_one.join("") == sorted_two.join("")
       return "anagram"
+    elsif sorted_one.join("") != sorted_two.join("")
+      "antigram"
     end
-
   end
 end
