@@ -3,24 +3,16 @@ class Anagram
     @firstword = word1
     @secondword = word2
   end
-
-
   def compare
     first_word_no_punctuation = @firstword.gsub(/[.,()"'*#{}-]/, '')
     second_word_no_punctuation = @secondword.gsub(/[.,()"'*#{}-]/, '')
-    print first_word_no_punctuation
-    print second_word_no_punctuation
     word_array_one = first_word_no_punctuation.downcase.split("")
     word_array_two = second_word_no_punctuation.downcase.split("")
     sorted_one = word_array_one.sort do |a,b| a <=> b end
     sorted_two = word_array_two.sort do |a,b| a <=> b end
     both_arrays_cloned = (sorted_one.clone + sorted_two.clone)
-
     not_antigram = sorted_one.all? { |e| sorted_two.include?(e)}
-    puts "not antigram"
-    print not_antigram
-    is_word = both_arrays_cloned.any?{|i| i == ("a"||"e"||"i"||"o"||"u"||"y")}
-    print is_word
+    is_word = both_arrays_cloned.any?{ |i| i == ("a"||"e"||"i"||"o"||"u"||"y")}
     if not_antigram == false
       answer = "antigram"
     elsif is_word == true

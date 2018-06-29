@@ -1,8 +1,6 @@
 require('rspec')
 require('anagram')
 
-
-
 describe('#anagram') do
   it("checks if two words are anagrams") do
     word = Anagram.new("team", "meat")
@@ -21,7 +19,7 @@ describe('#anagram') do
     expect(word.compare).to(eq("antigram"))
   end
   it("Check if multiple words are anagrams by removing spaces and punctuation") do
-    word = Anagram.new("w*il(-ma", "wi'l.ma")
+    word = Anagram.new("the w*il(-ma", "the wi'l.ma")
     expect(word.compare).to(eq("anagram"))
   end
 end
