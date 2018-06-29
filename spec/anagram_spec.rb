@@ -1,5 +1,6 @@
 require('rspec')
-require('anagram')
+require('ruby-dictionary')
+
 
 describe('#anagram') do
   it("checks if two words are anagrams") do
@@ -21,5 +22,9 @@ describe('#anagram') do
   it("Check if multiple words are anagrams by removing spaces and punctuation") do
     word = Anagram.new("the w*il(-ma", "the wi'l.ma")
     expect(word.compare).to(eq("anagram"))
+  end
+  it("Checks if input is an actual word in the english dictionary") do
+    word = Anagram.new("today", "flud")
+    expect(word.compare).to(eq("not a word in the english language"))
   end
 end

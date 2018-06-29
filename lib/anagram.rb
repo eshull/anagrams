@@ -1,11 +1,23 @@
+# class Dictionary
+#   initialize(word)
+#   @dictionary = word
+#   end
+# end
+
 class Anagram
   def initialize(word1, word2)
     @firstword = word1
     @secondword = word2
   end
+  # dictionary = Dictionary.new("dog")
+  # puts dictionary
   def compare
     first_word_no_punctuation = @firstword.gsub(/[.,()"'*#{}-]/, '')
     second_word_no_punctuation = @secondword.gsub(/[.,()"'*#{}-]/, '')
+    english_word_one = dictionary.exists?(first_word_no_punctuation)
+    english_word_two = dictionary.exists?(second_word_no_punctuation)
+    print english_word_one
+    print english_word_two
     word_array_one = first_word_no_punctuation.downcase.split("")
     word_array_two = second_word_no_punctuation.downcase.split("")
     sorted_one = word_array_one.sort do |a,b| a <=> b end
