@@ -10,12 +10,23 @@ class Anagram
     word_array_two = @secondword.downcase.split("")
     sorted_one = word_array_one.sort do |a,b| a <=> b end
     sorted_two = word_array_two.sort do |a,b| a <=> b end
-    print sorted_one
-    print sorted_two
+      print sorted_one
+    sorted_one.each do |y|
+    if y == ("a"|| "e"|| "i"|| "o"|| "u"|| "y")
+      print y
+      vari ="there is a vowel"
+      else
+        vari = "no"
+        print "not"
+      end
+      vari
+      print vari
+    end
     if sorted_one.join("") == sorted_two.join("")
       return "anagram"
     elsif sorted_one.join("") != sorted_two.join("")
       "antigram"
+
     end
   end
 end
