@@ -34,7 +34,23 @@ class Anagram
 #   end
 #
 # end
+
 # end
+#
+# word
+# a = [5, 1, 6, 14, 2, 8]
+# b = [2, 6, 15]
+#
+# a - b
+# => [5, 1, 14, 8]
+#
+# b - a
+# => [15]
+#
+# (b - a).empty?
+# => false
+
+# antigram = sorted_one.all? { |e| sorted_two.include?(e)}
 
 
   def compare
@@ -45,27 +61,21 @@ class Anagram
     sorted_two = word_array_two.sort do |a,b| a <=> b end
     both_arrays_cloned = (sorted_one.clone + sorted_two.clone)
 
-    # total_length = both_arrays_cloned.length
-    # is_word = (0..total_length).detect {|i| i == ("a"||"e"||"i"||"o"||"u"||"y")}
-    # print is_word
-    # both_arrays_cloned.each do |y|
-    #    y == ("a"|| "e"|| "i"|| "o"|| "u"|| "y")
-    #     print y
-    #     "not a word, try again"
-    #     answer = true
-     is_word = both_arrays_cloned.any?{|i| i == ("a"||"e"||"i"||"o"||"u"||"y")}
-     print "has a vowel"
-     print is_word
-    if is_word == true
+    antigram = sorted_one.all? { |e| sorted_two.include?(e)}
+    puts "antigram"
+    print antigram
+    is_word = both_arrays_cloned.any?{|i| i == ("a"||"e"||"i"||"o"||"u"||"y")}
+    if antigram == true
+      "antigram"
+    elsif is_word == true
       if sorted_one.join("") == sorted_two.join("")
       answer ="anagram"
       elsif sorted_one.join("") != sorted_two.join("")
-      answer ="antigram"
+      answer ="regular word"
       end
     elsif is_word == false
     answer = "not a word, try again"
     end
-    puts answer
     answer
   end
 end

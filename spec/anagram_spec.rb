@@ -16,4 +16,8 @@ describe('#anagram') do
     word = Anagram.new("Tmtx", "xtmt")
     expect(word.compare).to(eq("not a word, try again"))
   end
+  it("Checks if two words have no matching letters and are therefore Antigrams") do
+    word = Anagram.new("fred", "wilma")
+    expect(word.compare).to(eq("antigram"))
+  end
 end
