@@ -20,4 +20,8 @@ describe('#anagram') do
     word = Anagram.new("fred", "wilma")
     expect(word.compare).to(eq("antigram"))
   end
+  it("Check if multiple words are anagrams by removing spaces and punctuation") do
+    word = Anagram.new("wilma", "wi'l.ma")
+    expect(word.compare).to(eq("anagram"))
+  end
 end
