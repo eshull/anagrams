@@ -28,7 +28,8 @@ class Anagram
         end
         answer
       elsif
-        # puts "no vowel"
+        return answer
+      else
         answer = "not a word, try again"
         return answer
       end
