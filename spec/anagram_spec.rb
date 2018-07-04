@@ -22,4 +22,9 @@ describe('#anagram') do
     word = Anagram.new("the w*il(-ma", "the wi'l.ma")
     expect(word.compare).to(eq("anagram"))
   end
+  it("Check if multiple words are neither anagrams nor antigrams but are still words") do
+    word = Anagram.new("team", "tear")
+    expect(word.compare).to(eq("regular word"))
+  end
+
 end
