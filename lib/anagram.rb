@@ -18,6 +18,7 @@ class Anagram
         sorted_two = second_letters_array.sort do |a,b| a <=> b end
         not_antigram = sorted_one.any? { |e| sorted_two.include?(e)}
         print not_antigram
+        # if x.include?("")
         if not_antigram == true && sorted_one.join("") != sorted_two.join("")
           answer ="regular word"
         elsif not_antigram == false
@@ -25,8 +26,8 @@ class Anagram
         elsif sorted_one.join("") == sorted_two.join("")
           answer ="anagram"
         end
-        return answer
-      else
+        answer
+      elsif
         # puts "no vowel"
         answer = "not a word, try again"
         return answer
