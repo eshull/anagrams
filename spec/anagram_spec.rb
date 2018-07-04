@@ -26,5 +26,9 @@ describe('#anagram') do
     word = Anagram.new("team", "tear")
     expect(word.compare).to(eq("regular word"))
   end
+  it("Check multiple words with a non word in the middle") do
+    word = Anagram.new("team ttt tear", "team ttt tear")
+    expect(word.compare).to(eq("not a word, try again"))
+  end
 
 end
