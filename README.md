@@ -26,6 +26,8 @@ Anagrams and Antigrams: Comparing two words and those that have some of the same
 * Make sure the word inputted is actually a word by checking for vowels
 * Check if two words have no matching letters and are therefore Antigrams
 * Check if multiple words are anagrams by removing spaces and punctuation
+* Check if multiple words are neither anagrams nor antigrams but are still words
+* Check multiple words with a non word in the middle and return not a word
 
 ## License
 
