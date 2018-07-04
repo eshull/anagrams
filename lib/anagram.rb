@@ -27,7 +27,6 @@ class Anagram
         end
         return answer
       else
-        # puts "no vowel"
         answer = "not a word, try again"
         return answer
       end
